@@ -1,15 +1,13 @@
 import Button from '../Button/Button';
 import styles from './Buttons.module.scss';
 const Buttons = ({
-  data: {
-    intervalID,
-    stopTime,
-    setGlobalTime,
-    setStopTime,
-    setIntervalID,
-    setTime,
-    time,
-  },
+  intervalID,
+  stopTime,
+  setGlobalTime,
+  setStopTime,
+  setIntervalID,
+  setTime,
+  time,
 }) => {
   const start = () => {
     if (!intervalID) {

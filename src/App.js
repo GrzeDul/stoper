@@ -18,12 +18,14 @@ function App() {
     time,
   };
 
+  const intervalUpdateTime = 1;
+
   useEffect(() => {
     if (globalTime && !intervalID && !stopTime) {
       setIntervalID(
         setInterval(() => {
           setTime(Date.now() - globalTime);
-        }, 150)
+        }, intervalUpdateTime)
       );
     }
   }, [globalTime]);
@@ -39,7 +41,7 @@ function App() {
   return (
     <div className='app container'>
       <Display time={time} />
-      <Buttons data={data} />
+      <Buttons {...data} />
     </div>
   );
 }
